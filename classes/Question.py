@@ -5,6 +5,7 @@ class Question:
         self.comments = []
         self.dictionary = []
         self.commentDictionary = []
+        self.percentage = 0
 
     def add_comment(self, comment):
         self.comments.append(comment)
@@ -15,3 +16,5 @@ class Question:
     def setAllCommentDictionary(self, dictionary):
         self.commentDictionary = dictionary
 
+    def setPercentage(self, percentage):
+        self.percentage=percentage

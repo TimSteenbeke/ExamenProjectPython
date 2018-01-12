@@ -75,8 +75,9 @@ def createDictionary(text):
     textList = text.split()
     wordlist = removeStopwords(textList, stopwords)
     dictionary = wordListToFreqDict(wordlist)
-    sorteddict = sortFreqDict(dictionary)
-    return sorteddict
+    # sorteddict = sortFreqDict(dictionary)
+    # return sorteddict
+    return dictionary
 
 
 def setQuestionDictionaries(question):
