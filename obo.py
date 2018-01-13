@@ -1,7 +1,4 @@
-import nltk
-#nltk.download('wordnet')
-
-from nltk.stem.wordnet import WordNetLemmatizer
+import Filters as filter
 
 def wordListToFreqDict(wordlist):
     wordCount = len(wordlist)
@@ -73,7 +70,10 @@ def removeStopwords(wordlist, stopwords):
 
 def createDictionary(text):
     textList = text.split()
-    wordlist = removeStopwords(textList, stopwords)
+    lemList = filter.lemetizeWordList(textList)
+    wordlist = removeStopwords(lemList, stopwords)
+    # stemList = filter.stemetizWordList(textList)
+    # wordlist = removeStopwords(stemList,stopwords)
     dictionary = wordListToFreqDict(wordlist)
     # sorteddict = sortFreqDict(dictionary)
     # return sorteddict

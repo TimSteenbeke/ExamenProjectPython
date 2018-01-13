@@ -3,6 +3,7 @@
 import os
 import obo
 import Frequentie as freq
+import Filters as filter
 from classes.Corpus import Corpus
 from classes.Question import Question
 from classes.Comment import Comment
@@ -49,6 +50,7 @@ obo.setCorpusDictionary(corpus)
 for t in threads:
     q = t.question
     freq.percentageQuestion(corpus, q)
+    filter.commentRang(q)
     # print("question: " + str(t.id) + ", percentage: " + str(q.percentage))
 
 
