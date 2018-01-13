@@ -15,7 +15,7 @@ class Comment:
         self.rangwaarde = rangwaarde
 
     def commentString(self):
-        return "" + str(self.commentId) + " " + str(self.rang) + " " + str(self.rangwaarde) + " " + str(self.relevance)
+        return "" + str(self.commentId) + " " + str(self.rang) + " " + str(self.rangwaarde) + " " + str(self.relevance).lower()
 
     def setDictionary(self, dictionary):
         self.dictionary = dictionary
