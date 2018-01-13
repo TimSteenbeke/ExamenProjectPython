@@ -17,4 +17,4 @@ class Question:
         self.commentDictionary = dictionary
 
     def setPercentage(self, percentage):
-        self.percentage=percentage
+        self.percentage = percentage

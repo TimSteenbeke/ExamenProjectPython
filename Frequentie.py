@@ -14,3 +14,16 @@ def percentageQuestion(corpus, question):
             questionPercentage += (questionDict[key])
 
     question.setPercentage(questionPercentage)
+
+    for comment in question.comments:
+        commentdict = comment.dictionary
+        commentPercentage = 0
+        for key in commentdict.keys():
+            if key in corpusDict.keys():
+                # commentPercentage += math.log10((l*commentdict[key]) + ((1-l) *corpusDict[key]))
+                commentPercentage += ((l * commentdict[key]) + ((1 - l) * corpusDict[key]))
+            else:
+                # commentPercentage += math.log10(commentdict[key])
+                commentPercentage += (commentdict[key])
+        comment.setPercentage(commentPercentage)
+

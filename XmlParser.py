@@ -49,12 +49,12 @@ obo.setCorpusDictionary(corpus)
 for t in threads:
     q = t.question
     freq.percentageQuestion(corpus, q)
-    print("question: " + str(t.id) + ", percentage: " + str(q.percentage))
+    # print("question: " + str(t.id) + ", percentage: " + str(q.percentage))
 
 
-# file = open("results.txt", "w")
-# for thr in threads:
-#     file.write(thr.threadString())
-# file.close()
+file = open("scorer/results.txt", "w")
+for thr in threads:
+    file.write(thr.threadString())
+file.close()
 
 

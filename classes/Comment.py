@@ -20,3 +20,5 @@ class Comment:
     def setDictionary(self, dictionary):
         self.dictionary = dictionary
 
+    def setPercentage(self, percentage):
+        self.rangwaarde = percentage
