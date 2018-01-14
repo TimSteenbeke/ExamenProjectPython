@@ -37,16 +37,8 @@ for thread in threadsOrigin:
     obo.setQuestionDictionaries(q)
     t.set_question(q)
     threads.append(t)
-    """
-        print("thread id: " + t.id)
-        print("question subject: " + t.question.subject)
-        print("first comment: " + t.question.comments[0].body)
-        print("question dictionary[0]: " + str(t.question.dictionary[0]))
-        print("question comment dictionary[0]" + str(t.question.commentDictionary[0]))
-        print("comment dictionary[0]: " + str(t.question.comments[0].dictionary[0]))
-    """
+
 obo.setCorpusDictionary(corpus)
-#print("Corpus dictionary[0]: " + str(corpus.dictionary[0]))
 for t in threads:
     q = t.question
     freq.percentageQuestion(corpus, q)

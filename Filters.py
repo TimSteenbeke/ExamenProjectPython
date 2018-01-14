@@ -25,3 +25,8 @@ def commentRang(question):
     for i in range(len(commentsSorted)):
         commentsSorted[i].setRang(i+1)
     question.comments = commentsSorted
+
+
+def regexText(text):
+    regText = nltk.re.sub('[^A-Za-z]+', ' ', text)
+    return regText
