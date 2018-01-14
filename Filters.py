@@ -30,3 +30,12 @@ def commentRang(question):
 def regexText(text):
     regText = nltk.re.sub('[^A-Za-z]+', ' ', text)
     return regText
+
+
+def regexTextList(wordlist):
+    regList = []
+    for w in wordlist:
+        regW = nltk.re.sub('[^A-Za-z0-9]+', '', w)
+        if regW !='':
+            regList.append(regW)
+    return regList

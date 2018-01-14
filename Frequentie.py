@@ -9,8 +9,8 @@ def percentageQuestion(corpus, question):
         if key in corpusDict.keys():
             questionPercentage += math.log10((l*questionDict[key]) + ((1-l) *corpusDict[key]))
             # questionPercentage += ((l*questionDict[key]) + ((1-l) *corpusDict[key]))
-        else:
-            questionPercentage += math.log10(questionDict[key])
+        # else:
+            #questionPercentage += math.log10(questionDict[key])
             # questionPercentage += (questionDict[key])
 
     question.setPercentage(questionPercentage)
@@ -26,5 +26,10 @@ def percentageQuestion(corpus, question):
                 else:
                     commentPercentage += math.log10(commentdict[key])
                     # commentPercentage += (commentdict[key])
-            comment.setPercentage(commentPercentage)
+            if commentPercentage == 0:
+                comment.setPercentage(-100)
+                # comment.setrelevance(False)
+            else:
+                comment.setPercentage(commentPercentage)
+                # comment.setrelevance(True)
 

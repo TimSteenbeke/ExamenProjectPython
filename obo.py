@@ -69,13 +69,13 @@ def removeStopwords(wordlist, stopwords):
     return [w for w in wordlist if w not in stopwords]
 
 def createDictionary(text):
-    regText = filter.regexText(text)
-    textList = regText.split()
+    textList = text.split()
     lemList = filter.lemetizeWordList(textList)
     wordlist = removeStopwords(lemList, stopwords)
     # stemList = filter.stemetizWordList(textList)
     # wordlist = removeStopwords(stemList,stopwords)
-    dictionary = wordListToFreqDict(wordlist)
+    regList = filter.regexTextList(wordlist)
+    dictionary = wordListToFreqDict(regList)
     # sorteddict = sortFreqDict(dictionary)
     # return sorteddict
     return dictionary

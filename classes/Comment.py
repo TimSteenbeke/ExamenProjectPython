@@ -25,3 +25,6 @@ class Comment:
 
     def setPercentage(self, percentage):
         self.rangwaarde = percentage
+
+    def setrelevance(self,relevance):
+        self.relevance = relevance
